@@ -1,0 +1,1 @@
+protoc --proto_path=./ --go_out=plugins=grpc,paths=source_relative:./golang eth/eth.proto
