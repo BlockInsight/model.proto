@@ -4,6 +4,8 @@ package eth;
 
 option go_package = "github.com/blockinsight/model.proto/golang/eth";
 
+import "google/protobuf/any.proto";
+
 message Blockchain {
   string numberSize = 1;
   string hash = 2;
@@ -48,6 +50,7 @@ message TransactionReceipt {
   string cumulativeGasUsed = 5;
   string gasUsed = 6;
   string contractAddress = 7;
-  string logsBloom = 8;
-  string status = 9;
+  repeated google.protobuf.Any logs = 8;
+  string logsBloom = 9;
+  string status = 10;
 }
